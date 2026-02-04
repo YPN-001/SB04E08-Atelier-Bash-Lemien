@@ -1,0 +1,28 @@
+=== MONITORING TECHSECURE - vengefulspirit ===
+DATE   : 04/02/2026 15:46:04
+UPTIME : up 8 hours, 23 minutes
+-------------------------------------------
+CPU    : 2.3% [OK]
+MEM    : 30% (9 Go / 30 Go)
+
+UTILISATION DISQUES :
+/dev                                        0%
+/run                                        1%
+/sys/firmware/efi/efivars                  53%
+/                                          82%
+/dev/shm                                    1%
+/run/credentials/systemd-journald.service   0%
+/tmp                                        1%
+/var/log                                   82%
+/home                                      82%
+/boot                                       9%
+/mnt/Partage_Commun                         1%
+/run/user/1000                              1%
+
+TOP 5 PROCESSUS (CPU) :
+    PID CMD                         %CPU
+ 169843 ps -eo pid,cmd,%cpu --sort=  100
+   4019 /app/brave/brave --type=ren  4.2
+   4119 /app/brave/brave --type=ren  3.6
+   1327 /usr/bin/kwin_wayland --way  2.9
+   3888 /app/brave/brave --type=gpu  1.6
