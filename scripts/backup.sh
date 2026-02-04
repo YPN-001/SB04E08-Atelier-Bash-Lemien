@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Configuration des chemins explicites
+# Configuration des chemins absolus explicites
 BASE_PATH="/home/loken/Github/AIS/BLOC_B_TechnicienInfrastructure/SB04E08-Atelier-Bash-LeMien/scripts"
 LOG_DIR="${BASE_PATH}/logs"
 BACKUP_DIR="${BASE_PATH}/backup"
