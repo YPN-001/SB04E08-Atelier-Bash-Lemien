@@ -8,6 +8,14 @@ REPORT_FILE="${LOG_DIR}/monitor_${DATE_FILE}.txt"
 
 # Oui je n'utilise pas le chemin /var/log .. car c'est mon pc et je fais ce que je veux ! ^_^ 
 
+# bc = An Arbitrary Precision Calculator Language
+    # sudo pacman -S bc
+    # sudo apt update && sudo apt install bc
+if ! command -v bc &> /dev/null; then
+    echo "Erreur : 'bc' n'est pas installé. Veuillez l'installer. '"
+    exit 1
+fi
+
 # Définition de la colorémetrie des alertes (méthode TPUT)
 # Parce que c'est trop long de trouver la bonne couleur en ANSI ... :D 
 VERT=$(tput setaf 2)
