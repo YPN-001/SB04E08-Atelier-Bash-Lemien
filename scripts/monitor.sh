@@ -11,6 +11,8 @@ REPORT_FILE="${LOG_DIR}/monitor_${DATE_FILE}.txt"
 # bc = An Arbitrary Precision Calculator Language
     # sudo pacman -S bc
     # sudo apt update && sudo apt install bc
+    # sudo dnf install bc
+    #apk add bc
 if ! command -v bc &> /dev/null; then
     echo "Erreur : 'bc' n'est pas installé. Veuillez l'installer. '"
     exit 1
