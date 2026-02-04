@@ -96,6 +96,8 @@ check_all_services() {      # Création de la fonction
 
         # --CRÉATION DU JSON ---
         # On ajoute l'info dans le fichier json
+        # EOF = End Of File = Heredoc
+        # Va lire/prendre tout le contenu jusqu'à voir le mot EOF
         cat <<EOF >> "$JSON_FILE"
   {
     "service": "$service",
@@ -117,9 +119,7 @@ EOF
     echo "Rapport JSON généré : $JSON_FILE"
 }
 
-# ==============================================================================
-# 3. LOGIQUE PRINCIPALE (Watch / Restart / Normal)
-# ==============================================================================
+# 3. LOGIQUE PRINCIPALE     -   Boucle Watch / Restart / Normal
 
 if [[ "$OPTION" == "--watch" ]]; then
     
