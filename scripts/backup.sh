@@ -29,6 +29,7 @@ fi
 
 # Utilisation de awk pour l'espace libre (car il gère mieux les chiffres à virgule)
 FREE_SPACE=$(df -k "${BACKUP_DIR}" | awk 'NR==2 {print $4}')    # df -k pour récupérer l'info en kilokytes - pour plus de précision dans dans la taille
+                                                                # NR==2 deuxieme ligne // print $4 pour la colonne
 if [ "$FREE_SPACE" -lt 102400 ]; then
     echo "Erreur : Espace disque insuffisant." | tee -a "${LOG_FILE}"
     exit 1
